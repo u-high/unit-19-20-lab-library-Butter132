@@ -1,0 +1,56 @@
+
+
+class Book
+{
+  private String author, title;
+  private int isbn;
+  
+  public Book()
+  {
+    this("null", "null", 0);
+  }
+  
+  public Book(String authorIn, String titleIn, int isbnIn)
+  {
+    author = authorIn;
+    title = titleIn;
+    isbn = isbnIn;
+  }
+  
+  public String getAuthor()
+  {
+    return author;
+  }
+  
+  public void setAuthor(String authorIn)
+  {
+    author = authorIn;
+  }
+  
+  public String getTitle()
+  {
+    return title;
+  }
+  
+  public void setTitle(String titleIn)
+  {
+    title = titleIn;
+  }
+  
+    public int getISBN()
+  {
+    return isbn;
+  }
+  
+  public void setISBN(int isbnIn)
+  {
+    isbn = isbnIn;
+  }
+  
+  public String toString()
+  {
+    return "" + getAuthor() + ", " + getTitle() + ", " + getISBN();
+  }
+}
+  
+    

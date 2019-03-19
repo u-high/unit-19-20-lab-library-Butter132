@@ -1,0 +1,18 @@
+package library;
+
+class LibraryBook extends Book implements Comparable
+{
+  private int callNum;
+    
+  public LibraryBook()
+  {
+    this("null","null","0","0");
+  }
+  
+  public Library(String authorIn, String titleIn, String isbnIn, String callNumIn)
+  {
+    super(authorIn, titleIn, isbnIn);
+    callNum = callNumIn;
+  }
+  
+  
