@@ -1,6 +1,6 @@
 package library;
 
-abstract class LibraryBook extends Book implements Comparable
+abstract class LibraryBook extends Book implements Comparable<LibraryBook>
 {
   private String callNum;
     
@@ -25,15 +25,15 @@ abstract class LibraryBook extends Book implements Comparable
     callNum = callNumIn;
   }
   
-  public abstract void checkout(); 
+  public abstract void checkout(String name, String date); 
   public abstract String circulationStatus() ;
   public abstract void returned();
   
-  public int compareTo(Object other)
+  public int compareTo(LibraryBook other)
   {
-    if(callNum.compareTo(((LibraryBook)(other)).getCallNum()) == 0)
+    if(callNum.compareTo(other.getCallNum()) == 0)
       return 0;
-    else if(callNum.compareTo(((LibraryBook)(other)).getCallNum()) < 0)
+    else if(callNum.compareTo(other.getCallNum()) < 0)
       return -1;
       return 1;
   }
